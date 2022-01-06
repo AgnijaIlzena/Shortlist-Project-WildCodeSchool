@@ -12,5 +12,5 @@ class SignUpController extends AbstractController
         return $this->twig->render('SignUp/index.html.twig');
     }
 
-
 }
+

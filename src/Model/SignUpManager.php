@@ -4,7 +4,7 @@ namespace App\Model;
 
 class SignUpManager extends AbstractManager
 {
-    protected PDO $pdo;
+    protected \PDO $pdo;
 
     public const TABLE = '';
 
