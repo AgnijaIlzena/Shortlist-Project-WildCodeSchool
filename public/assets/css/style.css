@@ -1,0 +1,16 @@
+:root {
+    --dark-bckg: #373f47;
+    --green: #157f1f;
+    --accent: #d81159;
+    --white: #eef0f2;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+}
+
+body {
+    background-color: var(--dark-bckg);
+}

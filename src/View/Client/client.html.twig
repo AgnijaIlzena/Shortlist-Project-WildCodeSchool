@@ -1,0 +1,72 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div>
+        <div class="watchlist-title-container">
+            <h3 class="watchlist">Your Watchlist</h3>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-6 watchlist-container">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">The Matrix Resurrections</h4>
+            </div>
+            <div class="card-body">
+
+
+                <div class="col-lg-6 wow fadeIn d-block video-container">
+                        <div class="embed-responsive embed-responsive-16by9 wow fadeInRight ">
+                            <iframe class="embed-responsive-item video"src="https://www.youtube.com/embed/9ix7TUGVYIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>" allowfullscreen></iframe>
+                        </div>
+                </div>
+
+
+
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>From visionary filmmaker Lana Wachowski comes “The Matrix Resurrections,” the long-awaited fourth film in the groundbreaking franchise that redefined a genre.  The new film reunites original stars Keanu Reeves and Carrie-Anne Moss in the iconic roles they made famous, Neo and Trinity.</li>
+                </ul>
+                <div class="row">
+                <div class="col">
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Watch</button>
+                </div>
+                    <div class="col">
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="col-md-6 watchlist-container">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Title 1</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">Video Content<small class="text-muted fw-light"></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>some description</li>
+                </ul>
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="w-100 btn btn-lg btn-outline-primary">Watch</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="w-100 btn btn-lg btn-outline-primary">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+
+{% endblock %}

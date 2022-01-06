@@ -17,6 +17,7 @@
     {% block stylesheet %}{% endblock %}
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/styleFooter.css">
+    <link rel="stylesheet" href="/assets/css/styleClient.css">
     <link rel="icon" href="/assets/images/favicon.png">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/994dfc7f5c.js" crossorigin="anonymous"></script>
@@ -28,7 +29,9 @@
 <body>
     {% block header %}{% endblock %}
     {% block content %}{% endblock %}
-    {% block footer %}{% endblock %}
+    {% block footer %}
+        {% include 'Footer/footer.html.twig'%}
+    {% endblock %}
     {% block javascript %}{% endblock %}
 
 </body>
