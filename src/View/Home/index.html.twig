@@ -1,9 +1,4 @@
 {% extends 'layout.html.twig' %}
-
-
-{% block content %}
-    {{ parent() }}
-    {% include 'Home/home.html.twig' %}
-{% endblock %}
+{% block content %}{% include 'Home/home.html.twig' %}{% endblock %}
 {% block javascript %}
 {% endblock %}

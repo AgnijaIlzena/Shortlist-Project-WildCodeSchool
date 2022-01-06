@@ -4,51 +4,16 @@ namespace App\Model;
 
 class SignUpManager extends AbstractManager
 {
-    protected \PDO $pdo;
-
+    protected PDO $pdo;
     public const TABLE = '';
 
-    public function __construct()
+    public function insert(array $item): int
     {
-        $connection = new Connection();
-        $this->pdo = $connection->getPdoConnection();
-    }
-
-    /**
-     * Get all row from database.
-     */
-    public function selectAll(string $orderBy = '', string $direction = 'ASC'): array
-    {
-        $query = 'SELECT * FROM ' . static::TABLE;
-        if ($orderBy) {
-            $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
-        }
-
-        return $this->pdo->query($query)->fetchAll();
-    }
-
-    /**
-     * Get one row from database by ID.
-     *
-     */
-    public function selectOneById(int $id)
-    {
-        // prepared request
-        $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE id=:id");
-        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement = $this->pdo->prepare("INSERT INTO USER " . self::TABLE . " (` user_name`,` email`,`passowrd `) VALUES (:user_name,:email,:passowrd)");
+        $statement->bindValue('user_name', $item['user_name'], \PDO::PARAM_STR);
+        $statement->bindValue('email', $item['email'], \PDO::PARAM_STR);
+        $statement->bindValue('passowrd', $item['passowrd'], \PDO::PARAM_STR);
         $statement->execute();
-
-        return $statement->fetch();
-    }
-
-    /**
-     * Delete row form an ID
-     */
-    public function delete(int $id): void
-    {
-        // prepared request
-        $statement = $this->pdo->prepare("DELETE FROM " . static::TABLE . " WHERE id=:id");
-        $statement->bindValue('id', $id, \PDO::PARAM_INT);
-        $statement->execute();
+        return (int)$this->pdo->lastInsertId();
     }
 }

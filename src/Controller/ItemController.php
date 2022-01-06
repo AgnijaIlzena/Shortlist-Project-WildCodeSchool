@@ -16,15 +16,6 @@ class ItemController extends AbstractController
 
         return $this->twig->render('Item/index.html.twig', ['items' => $items]);
     }
-    public function contact()
-    {
-        return $this->twig->render('contactUs/contact.html.twig');
-    }
-    public function login()
-    {
-        return $this->twig->render('Login/index.html.twig');
-    }
-
     /**
      * Show informations for a specific item
      */
@@ -35,8 +26,6 @@ class ItemController extends AbstractController
 
         return $this->twig->render('Item/show.html.twig', ['item' => $item]);
     }
-
-
     /**
      * Edit a specific item
      */
@@ -81,8 +70,6 @@ class ItemController extends AbstractController
 
         return $this->twig->render('Item/add.html.twig');
     }
-
-
     /**
      * Delete a specific item
      */
