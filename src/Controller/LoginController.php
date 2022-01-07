@@ -6,13 +6,10 @@ use App\Model\LoginManager;
 
 class LoginController extends AbstractController
 {
-    /**
-     * List items
-     */
-    public function index()
-    {
-        return $this->twig->render('Login/index.html.twig');
-    }
 
+    public function login()
+    {
+        return $this->twig->render('Login/login.html.twig');
+    }
 }
 

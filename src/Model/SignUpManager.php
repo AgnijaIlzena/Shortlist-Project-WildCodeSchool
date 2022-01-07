@@ -4,16 +4,16 @@ namespace App\Model;
 
 class SignUpManager extends AbstractManager
 {
-    protected PDO $pdo;
-    public const TABLE = '';
+    public const TABLE = 'user';
 
-    public function insert(array $item): int
+    public function insert(array $deatil): int
     {
-        $statement = $this->pdo->prepare("INSERT INTO USER " . self::TABLE . " (` user_name`,` email`,`passowrd `) VALUES (:user_name,:email,:passowrd)");
-        $statement->bindValue('user_name', $item['user_name'], \PDO::PARAM_STR);
-        $statement->bindValue('email', $item['email'], \PDO::PARAM_STR);
-        $statement->bindValue('passowrd', $item['passowrd'], \PDO::PARAM_STR);
+        $query = 'INSERT INTO user(user_name, email,passowrd) VALUES (:user_name, :email,:passowrd)';
+        $statement->bindValue(':user_name', $deatil['user_name'], \PDO::PARAM_STR);
+        $statement->bindValue(':email', $deatil['email'], \PDO::PARAM_STR);
+        $statement->bindValue(':passowrd', $deatil['passowrd'], \PDO::PARAM_STR);
         $statement->execute();
-        return (int)$this->pdo->lastInsertId();
+
     }
+
 }

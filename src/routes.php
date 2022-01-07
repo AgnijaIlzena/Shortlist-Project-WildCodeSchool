@@ -15,6 +15,7 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'contactUs/index' => ['ContactController', 'index',],
-    'Login/index' => ['LoginController', 'index',],
-    'SignUp/index' => ['SignUpController', 'index',],
+    'Login/login' => ['LoginController', 'login',],
+    'SignUp/signUp' => ['SignUpController', 'signUp',],
+    'SignUp/add' => ['SignUpController', 'add',],
 ];
