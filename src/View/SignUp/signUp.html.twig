@@ -40,10 +40,6 @@
                             <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
                             <form>
-                                <?php foreach ($errors as $error) : ?>
-                                <p><?= $error ?></p>
-                                <?php endforeach; ?>
-
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Your Name</label>
                                     <input type="text" id="user_name" class="form-control form-control-lg" value="{{ user.user_name }}"><?= $deatil['user_name'] ?? '' ?>

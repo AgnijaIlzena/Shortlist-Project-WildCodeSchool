@@ -43,10 +43,10 @@ class Connection
      */
     public function __construct()
     {
-        $this->user = 'root';
-        $this->host = 'localhost';
-        $this->password = 'Ki@nsh';
-        $this->dbName = 'testDB';
+        $this->user = DB_USER;
+        $this->host = DB_HOST;
+        $this->password = DB_PASSWORD;
+        $this->dbName = DB_NAME;
         try {
             $this->pdoConnection = new PDO(
                 'mysql:host=' . $this->host . '; dbname=' . $this->dbName . '; charset=utf8',

@@ -11,7 +11,6 @@ class SignUpController extends AbstractController
         $SignUpManager = new SignUpManager();
         $SignUp = $SignUpManager->selectAll('id');
         return $this->twig->render('SignUp/signUp.html.twig');
-
     }
 
 }
