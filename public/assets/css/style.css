@@ -1,8 +1,8 @@
 :root {
-    --dark-bckg: #373f47;
-    --green: #157f1f;
-    --accent: #d81159;
-    --white: #eef0f2;
+    --dark-bckg: #201F24;
+    --green: #265485;
+    --accent: #DE393F;
+    --white: #fdfdff;
 
 * {
     margin: 0px;

@@ -27,14 +27,14 @@
 </head>
 
 <body>
-    {% block header %}{% endblock %}
-    {% block content %}{% endblock %}
-    {% block footer %}
-        {% include 'Footer/footer.html.twig'%}
-    {% endblock %}
-    {% block javascript %}{% endblock %}
 
-</body>
-</html>
+    {% block content %} {% endblock %}
+    {% block client %} {% endblock %}
+    {% include 'Component/_footer.html.twig'%}
+
+</body></html>
+
+
+
 
 
