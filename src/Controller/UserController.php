@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\ItemManager;
+
 class UserController extends AbstractController
 {
     /**

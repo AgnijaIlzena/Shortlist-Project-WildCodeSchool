@@ -11,13 +11,20 @@
 
 }
 
-
-
-.video {
-    width: 35rem;
-    height: 20rem;
-}
-
 li {
     font-size: 0.8rem;
 }
+
+.btn {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+}
+
+.delete:hover {
+    background-color: var(--accent);
+}
+
+
+
+
