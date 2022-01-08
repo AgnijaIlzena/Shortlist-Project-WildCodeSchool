@@ -1,5 +1,8 @@
 {# TODO : manage errors display #}
+{% block header%}
+	{% include 'Item/header.html.twig' %}
 
+{% endblock %}
 <form method="post">
 	<input type="hidden" value="{{ item.id }}" name="id">
 	<input type="text" value="{{ item.title }}" name="title">
