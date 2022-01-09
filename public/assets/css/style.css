@@ -3,8 +3,9 @@
     --blue: #265485;
     --accent: #DE393F;
     --white: #fdfdff;
+    --light-blue: #549CB4;
 
-
+}
 
 
 * {
@@ -13,10 +14,19 @@
     box-sizing: border-box;
 }
 
+.btn-primary{
+    background-color: var(--blue)
 }
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: var(--accent) !important;
+}
+
+
 
 body {
     background-color: var(--dark-bckg);
+    font-family: 'Montserrat', sans-serif;
 }
 
 

@@ -1,14 +1,21 @@
 {% extends 'layout.html.twig' %}
 
+{% block title %}{{ parent() }} Watchlist {% endblock %}
 {% block client %}
-
+<section id="watchlist-block">
     <div>
-        <div class="watchlist-title-container">
-            <h3 class="watchlist">Your Watchlist</h3>
+        <div class="watchlist-title-container row">
+            <div class="col">
+                <h3 class="watchlist">Your Watchlist</h3>
+            </div>
+            <div class="col">
+                <h2 class="greeting-block">Hello {# Include users name #}</h2>
+            </div>
+
         </div>
     </div>
     <div class="col-md-6 watchlist-container">
-        <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="watchlist-card card mb-4 rounded-3 shadow-sm">
             <div class="card-header py-3">
                 <h4 class="my-0 fw-normal">Leon</h4>
             </div>
@@ -19,12 +26,12 @@
                     </div>
                 </div>
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li>A Professional assassin rescues a teenage girl whose parents were killed
+                        <li class="description-watchlist">A Professional assassin rescues a teenage girl whose parents were killed
                             in a police raid. With Jean Reno, Gary Oldman and Natalie Portman.</li>
                     </ul>
-                <div class="row">
+                <div class=" card-bottom row">
                     <div class="col">
-                        <button type="button" class="w-100 btn btn-lg btn-secondary">Watch</button>
+                        <button type="button" class="w-100 btn btn-lg btn-secondary watch">Watch</button>
                     </div>
                     <div class="col">
                         <button type="button" class="w-100 btn btn-lg btn-secondary delete">Delete</button>
@@ -33,5 +40,5 @@
             </div>
         </div>
     </div>
-
+</section>
 {% endblock %}

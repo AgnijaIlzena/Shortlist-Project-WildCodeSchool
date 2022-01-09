@@ -4,22 +4,16 @@ font-family: 'Montserrat', sans-serif;
     background-color: var(--dark-bckg);
     color: var(--white);
     padding: 5%;
-    height: 15vh;
-    }
-
-.footer-top {
 }
-
-.logo {
-   }
 
 h6 {
     padding-top: 17px;
 }
+
 .footer-item-1 {
     text-align: center;
     margin-bottom: 5%;
-  }
+}
 
 .footer-item-2 {
     text-align: center;
@@ -35,7 +29,6 @@ h6 {
 .sign {
     font-size: 2rem;
     font-weight: bold;
-
 }
 
 span {
@@ -65,7 +58,8 @@ h6 {
 
 .footer-bottom {
     text-align: center;
-   }
+}
+
 a {
     text-decoration: none;
     color: var(--white);
@@ -81,11 +75,8 @@ a:hover {
 }
 
 .terms {
-
     font-size: 0.8rem;
 }
-
-
 
 @media only screen and (max-width: 360px) {
 
@@ -115,8 +106,6 @@ a:hover {
         margin-left: 0%;
         text-align: center;
     }
-
-
 }
 
 

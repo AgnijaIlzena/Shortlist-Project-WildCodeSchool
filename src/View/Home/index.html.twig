@@ -1,8 +1,7 @@
 {% extends 'layout.html.twig' %}
 
-{#
-{% block content %}{% include 'Home/home.html.twig' %}{% endblock %}
-#}
+{% block title %}Welcome to {{ parent() }} ! {% endblock %}
 
-{% block content %}{% include 'Home/newWelcomeBlock.html.twig' %}{% endblock %}
+{% block content %}{% include 'Home/welcome.html.twig' %}{% endblock %}
+{% block subcontent %}{% include 'Home/gameRules.html.twig' %}{% endblock %}
 
