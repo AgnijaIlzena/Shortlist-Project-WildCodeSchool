@@ -41,7 +41,7 @@ class ItemController extends AbstractController
             // TODO validations (length, format...)
 
             // if validation is ok, update and redirection
-            $itemManager->update($item);
+          //  $itemManager->update($item);
             header('Location: /items/show?id=' . $id);
         }
 
