@@ -1,24 +1,19 @@
 
 #footer {
 font-family: 'Montserrat', sans-serif;
-    background-color: #373f47;
-    color: #eef0f2;
+    background-color: var(--dark-bckg);
+    color: var(--white);
     padding: 5%;
-    }
-
-.footer-top {
-    margin: 0;
 }
 
-i {
-    color: #157f1f;
-    font-size: 200px;
+h6 {
+    padding-top: 17px;
 }
 
 .footer-item-1 {
     text-align: center;
     margin-bottom: 5%;
-  }
+}
 
 .footer-item-2 {
     text-align: center;
@@ -34,7 +29,6 @@ i {
 .sign {
     font-size: 2rem;
     font-weight: bold;
-
 }
 
 span {
@@ -64,14 +58,15 @@ h6 {
 
 .footer-bottom {
     text-align: center;
-   }
+}
+
 a {
     text-decoration: none;
-    color: #eef0f2;
+    color: var(--white);
 }
 
 a:hover {
-    color: #157f1f;
+    color: var(--accent);
 }
 
 .copyright {
@@ -80,14 +75,10 @@ a:hover {
 }
 
 .terms {
-
     font-size: 0.8rem;
 }
 
 @media only screen and (max-width: 360px) {
-    .social-media {
-        width: 30%;
-    }
 
     .follow-us {
         margin-left: 0%;
@@ -96,6 +87,17 @@ a:hover {
 
     h6 {
         margin-bottom: 2%;
+    }
+
+    .social-media {
+        width: 20%;
+        padding-bottom: 5%;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .social-media {
+        width: 20%;
     }
 }
 
