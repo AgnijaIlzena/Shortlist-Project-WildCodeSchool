@@ -27,6 +27,7 @@ define('APP_DB_PASSWORD', 'your_db_password');
 
 If you develop on Windows, you should edit you git configuration to change your end of line rules with this command :
 
+`git config --global core.autocrlf true`
 
 ## Example 
 

@@ -8,9 +8,7 @@ class LoginController extends AbstractController
 {
     public function login(): string
     {
-
-
-        $error = '';
+       $error = '';
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $user = array_map('trim', $_POST);
             $loginManager = new LoginManager();
@@ -22,7 +20,8 @@ class LoginController extends AbstractController
                         if (password_verify($password, $email['passowrd'])) {
                             $_SESSION['email'] = $email['email'];
                             $_SESSION['id'] = $email['id'];
-                            header("Location:/Home/index");
+                            header("Location: /home/index");
+                            return '';
                         } else {
                             $error = "password is not correct";
                         }
@@ -34,11 +33,13 @@ class LoginController extends AbstractController
                 }
             }
         }
-        return $this->twig->render('Login/login.html.twig', ['error' => $error]);
+
+        return $this->twig->render('login/login.html.twig', ['error' => $error]);
     }
+
     public function logout()
     {
         session_destroy();
-        header("Location:/Home/index");
+        header("Location: /home/index");
     }
 }
