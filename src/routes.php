@@ -16,4 +16,5 @@ return [
     'items/delete' => ['ItemController', 'delete',],
     'Login/login' => ['LoginController', 'login',],
     'Signup/signup' => ['SignupController', 'signup',],
+    'contact' => ['ContactController', 'index',],
    ];
