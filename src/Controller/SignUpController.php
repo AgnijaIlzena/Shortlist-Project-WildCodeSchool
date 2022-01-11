@@ -13,10 +13,10 @@ class SignUpController extends AbstractController
     public function add(): string
     {
         $error = '';
-        if ($_SERVER ['REQUEST_METHOD'] === 'POST')  {
+        if ($_SERVER ['REQUEST_METHOD'] === 'POST') {
             $user = array_map('trim', $_POST);
-            $signUpManager = new SignUpManager ();
-            $result = $signUpManager->checkemail($_POST['email']);
+            $signUpManager = new SignUpManager();
+            $result = $signUpManager->checkemail($_POST ['email']);
             if ($result) {
                 $signUpManager->insert($user);
                 header('Location: /Home/index');

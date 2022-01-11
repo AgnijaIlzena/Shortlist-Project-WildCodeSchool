@@ -42,24 +42,24 @@
                                     {% endif %}
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example1cg">Your Name</label>
-                                        <input type="text" name="user_name" class="form-control form-control-lg" value=" "><?= $deatil['user_name'] ?? '' ?>
+                                        <input type="text" name="user_name" required="required" class="form-control form-control-lg" value=" ">
 
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example3cg"required="required">Your Email</label>
-                                        <input type="email" name="email" class="form-control form-control-lg" value=" " >
+                                        <input type="email" name="email" required="required" class="form-control form-control-lg" value=" " >
 
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example4cg">Password</label>
-                                        <input type="password" id="password" name="passowrd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" class="form-control form-control-lg" value="">
+                                        <input type="password" id="password" required="required" name="passowrd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" class="form-control form-control-lg" value="">
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example4cdg">Repeat your password</label>
-                                        <input type="password" id="password2" class="form-control form-control-lg" value="">                              </div>
+                                        <input type="password" id="password2" required="required" class="form-control form-control-lg" value="">                              </div>
                                     <span id='message'></span>
                                     <div class="form-check d-flex justify-content-left mb-5">
                                      <input
@@ -67,6 +67,7 @@
                                              type="checkbox"
                                              value=""
                                              id="form2Example3cg"
+                                             required="required"
                                      />
 
                                   <label class="form-check-label" for="form2Example3g" id="agree">
