@@ -44,15 +44,11 @@ h4 {
     color: var(--white);
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-
-
-
 }
 
 .description-watchlist {
-    font-size: 0.8rem;
+    padding: 0 5%;
     color: var(--white);
-    padding: 0 3%;
 }
 
 .btn {

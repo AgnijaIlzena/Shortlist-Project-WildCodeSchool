@@ -34,6 +34,7 @@ class GetQuestionModel extends AbstractManager
         */
     }
 
+
     /*    public function getAnswersById(int $id): array
         {
             $statement = $this->pdo->prepare("SELECT * FROM" . self::ANSWER . "WHERE id=:id");
@@ -50,5 +51,24 @@ class GetQuestionModel extends AbstractManager
     $answers = $statement->fetchAll();
     return $answers;
     */
+
+/*    public function getAnswersById(int $id): array
+    {
+        $statement = $this->pdo->prepare("SELECT * FROM" . self::ANSWER . "WHERE id=:id");
+        $statement->bindValue('id', $answer['id'], \PDO::PARAM_INT);
+
+        $statement->execute();
+        return (int)$this->pdo->lastInsertId();
+*/
+        /*
+        $db = new Connection();
+        $conn = $db->getPdoConnection();
+        $query = 'SELECT * FROM answer WHERE id=:id';
+        $statement = $conn->query($query);
+        $statement->bindValue(':id', $id, \PDO::PARAM_INT);
+        $answers = $statement->fetchAll();
+        return $answers;
+        */
+
 }
 //}
