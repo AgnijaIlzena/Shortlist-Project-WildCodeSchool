@@ -10,13 +10,18 @@ use PDO;
  */
 class LoginManager extends AbstractManager
 {
-    protected PDO $pdo;
+    public const TABLE = 'user';
 
-    public const TABLE = '';
-
-    public function __construct()
+    public function checkemail(string $email): ?array
     {
-        $connection = new Connection();
-        $this->pdo = $connection->getPdoConnection();
+        $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE email = :email");
+        $statement->bindValue('email', $email, \PDO::PARAM_STR);
+        $statement->execute();
+        $result = $statement->fetch();
+        if ($result) {
+            return $result;
+        } else {
+            return null;
+        }
     }
 }
