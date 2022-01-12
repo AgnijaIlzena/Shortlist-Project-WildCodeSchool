@@ -19,5 +19,6 @@ return [
     'login' => ['LoginController', 'login',],
     'signUp' => ['SignUpController', 'signUp',],
     'signUp/add' => ['SignUpController', 'add',],
+    'terms' => ['SignUpController', 'terms',],
     'signout' => ['LoginController', 'logout',],
    ];
