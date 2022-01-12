@@ -47,6 +47,7 @@ class Connection
         $this->host = DB_HOST;
         $this->password = DB_PASSWORD;
         $this->dbName = DB_NAME;
+
         try {
             $this->pdoConnection = new PDO(
                 'mysql:host=' . $this->host . '; dbname=' . $this->dbName . '; charset=utf8',

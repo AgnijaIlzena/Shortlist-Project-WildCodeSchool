@@ -2,6 +2,7 @@
 
 return [
     '' => ['HomeController', 'index',],
+    'game' => ['QuizController', 'quizDisplay',],
     'user/films' => ['FilmController', 'index'],
     'user/films/delete' => ['FilmController', 'delete',],
     'items' => ['ItemController', 'index',],

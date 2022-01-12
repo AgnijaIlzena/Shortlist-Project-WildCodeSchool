@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block content %}
+    {{ question }}
+    <form method="post" action= "/game?answer=a">
+        <button type="submit">{{ answers[0] }}</button>
+    </form>
+    <form method="post" action="/game?answer=b">
+        <button type="submit">{{ answers[1] }}</button>
+    </form>
+    <form method="post" action="/game?answer=c">
+        <button type="submit">{{ answers[2] }}</button>
+    </form>
+    <form method="post" action="/game?answer=d">
+        <button type="submit">{{ answers[3] }}</button>
+    </form>
+{% endblock %}
