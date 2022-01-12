@@ -10,7 +10,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
+   }
 
 .btn-primary{
     background-color: var(--blue)
@@ -23,15 +23,10 @@
 body {
     background-color: var(--dark-bckg);
     font-family: 'Montserrat', sans-serif;
-    color: var(--white);
-}
+ }
 
 /*
     font-family: 'Montserrat', sans-serif;
     font-family: 'Ubuntu', sans-serif;
     */
 }
-
-
-
-
