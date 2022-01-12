@@ -10,7 +10,7 @@
 }
 
 .watchlist-card {
-    background-color: var(--dark-bckg);
+    background-color: var(--dark-bckg) !important;
     border: none;
     }
 

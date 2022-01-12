@@ -29,7 +29,7 @@ class LoginController extends AbstractController
                         $error = "email-id is not present";
                     }
                 } else {
-                    $error = "all fields is required";
+                    $error = "all fields are required";
                 }
             }
         }
