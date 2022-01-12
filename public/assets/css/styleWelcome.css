@@ -1,0 +1,34 @@
+
+#welcome-block {
+    background-color: var(--dark-bckg);
+    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-left: 4%;
+}
+
+.welcome-img {
+    width: 100%;
+}
+
+.slogan {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 5.5rem;
+    color: var(--accent);
+    line-height: 1.5;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+
+.left-block {
+    text-align: center;
+}
+
+.play {
+   padding: 2% 6%;
+ }
+
+.play-icon {
+    padding-right: 20px;
+}

@@ -1,0 +1,31 @@
+
+#game-rules-block {
+background-color: var(--light-blue);
+padding: 7% 5%;
+}
+
+.rule-item {
+text-align: center;
+padding: 5%;
+}
+
+.sub-title {
+font-family:  font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+color: var(--blue);
+}
+
+.description-rules {
+color: var(--dark-bckg);
+}
+
+.rule-icon {
+color: var(--blue);
+margin-bottom: 1rem;
+}
+
+.rule-icon:hover {
+color: var(--accent);
+}
+
+

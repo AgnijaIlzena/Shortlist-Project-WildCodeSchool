@@ -1,0 +1,43 @@
+
+.collapse {
+    background-color: var(--dark-bckg);
+    width: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-item {
+    font-size: 1.2rem;
+}
+
+.right-nav-item {
+    font-size: 1rem;
+}
+
+.sign-list {
+    color: var(--accent);
+    font-size: 0.5rem;
+}
+
+/* Display:none; when user is loged in */
+
+/*
+.sign-container {
+    display: none;
+}
+*/
+
+/* Display: none; when user is Loged Out */
+
+/*
+.right-menu {
+    display: none;
+}
+*/
+
+@media only screen and (max-width: 360px) {
+    .collapse {
+        height: 100vh;
+    }
+}
+

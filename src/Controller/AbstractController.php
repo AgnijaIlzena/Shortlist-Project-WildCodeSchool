@@ -24,5 +24,9 @@ abstract class AbstractController
             ]
         );
         $this->twig->addExtension(new DebugExtension());
+        if (isset($_SESSION['email'])) {
+            $email = $_SESSION['email'];
+            $this->twig->addGlobal('email', $email);
+        }
     }
 }
