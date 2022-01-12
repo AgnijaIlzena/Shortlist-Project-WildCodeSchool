@@ -8,7 +8,7 @@ class LoginController extends AbstractController
 {
     public function login(): string
     {
-       $error = '';
+        $error = '';
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $user = array_map('trim', $_POST);
             $loginManager = new LoginManager();
