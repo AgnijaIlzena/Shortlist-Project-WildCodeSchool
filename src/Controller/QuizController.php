@@ -46,9 +46,6 @@ class QuizController extends AbstractController
                     $_SESSION['d']++;
                     $_SESSION['i']++;
                     break;
-                default:
-                    echo 'Not a valid answer';
-                    break;
             }
         }
 
