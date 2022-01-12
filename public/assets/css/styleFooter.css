@@ -3,8 +3,12 @@
 font-family: 'Montserrat', sans-serif;
     background-color: var(--dark-bckg);
     color: var(--white);
-    padding: 5%;
+    padding: 0 5%;
 }
+
+.footer-top {
+   justify-content: space-evenly;
+    }
 
 h6 {
     padding-top: 17px;
@@ -12,33 +16,36 @@ h6 {
 
 .footer-item-1 {
     text-align: center;
-    margin-bottom: 5%;
-}
+    margin-bottom: 2%;
+    padding-top: 2%;
+    }
 
 .footer-item-2 {
     text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+    padding-top: 2%;
 }
 
 .footer-item-3 {
     text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+    padding-top: 2%;
 }
 
 
 .sign {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 span {
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 0px 5px;
 }
 
 h6 {
-    font-size: 2rem;
-    margin-bottom: 5%;
+    font-size: 1rem;
+    margin-bottom: 4%;
     }
 
 .follow-us {
@@ -47,7 +54,7 @@ h6 {
 }
 
 .social-media {
-    width: 50%;
+    width: 30%;
     padding-bottom: 5%;
 }
 
@@ -71,11 +78,11 @@ a:hover {
 
 .copyright {
     margin-bottom: 1%;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .terms {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 @media only screen and (max-width: 360px) {

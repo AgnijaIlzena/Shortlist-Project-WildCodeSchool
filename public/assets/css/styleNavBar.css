@@ -11,7 +11,7 @@
 }
 
 .right-nav-item {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .sign-list {
@@ -34,7 +34,6 @@
     display: none;
 }
 */
-
 @media only screen and (max-width: 360px) {
     .collapse {
         height: 100vh;
