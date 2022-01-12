@@ -2,20 +2,23 @@
 
 namespace App\Controller;
 
-use App\Model\QuizModel;
+use App\Model\getQuestionModel;
+use App\Model\getAnswersModel;
 
-include __DIR__ . '/../Model/QuizModel.php';
-
-class QuizController
+class QuizController extends AbstractController
 {
-    private QuizModel $model;
+//    private getQuestionModel $getQuestionModel;
+//    private getAnswersModel $getAnswersModel;
 
+    /*
     public function __construct()
     {
-        $this->model = new QuizModel();
+        $this->getQuestionModel = new getQuestionModel();
+        $this->getAnswersModel = new getAnswersModel();
     }
+    */
 
-    public function quizDisplay(): void
+    public function quizDisplay()
     {
         if (!isset($_SESSION['i'])) {
             $_SESSION['i'] = 1; // Variable showing which question it is that is displayed
@@ -25,16 +28,50 @@ class QuizController
             $_SESSION['d'] = 0; // Amount of D answers
         }
 
+        if ($_GET['answer'] !== 'start') {
+            switch ($_GET['answer']) {
+                case 'a':
+                    $_SESSION['a']++;
+                    $_SESSION['i']++;
+                    break;
+                case 'b':
+                    $_SESSION['b']++;
+                    $_SESSION['i']++;
+                    break;
+                case 'c':
+                    $_SESSION['c']++;
+                    $_SESSION['i']++;
+                    break;
+                case 'd':
+                    $_SESSION['d']++;
+                    $_SESSION['i']++;
+                    break;
+                default:
+                    echo 'Not a valid answer';
+                    break;
+            }
+        }
+
         if ($_SESSION['i'] === 9) {
             unset($_SESSION['i']);
-            header('Location:'); // Need to put in the redirection to the result screen
+            if (
+                $_SESSION['d'] >= $_SESSION['c']
+                && $_SESSION['d'] >= $_SESSION['b']
+                && $_SESSION['d'] >= $_SESSION['a']
+            ) {
+                $trailer = 'd';
+            }
+            header('Location: game/result', ['trailer' => $trailer]);
             return;
         }
 
-        $question = $this->model->getQuestionById($_SESSION['i']);
+        $getQuestionModel = new getQuestionModel();
+        $getAnswersModel = new getAnswersModel();
 
-        $answerArray = $this->model->getAnswersById($_SESSION['i']);
+        $question = $getQuestionModel->getQuestionById($_SESSION['i']);
 
-        require __DIR__ . '/../View/Game/quiz.html.twig';
+        $answerArray = $getAnswersModel->getAnswersById($_SESSION['i']);
+
+        return $this->twig->render('Game/quiz.html.twig', ['question' => $question , 'answers' => $answerArray]);
     }
 }
