@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use App\Model\getQuestionModel;
-use App\Model\getAnswersModel;
+use App\Model\GetQuestionModel;
+use App\Model\GetAnswersModel;
 
 class QuizController extends AbstractController
 {
@@ -61,12 +61,35 @@ class QuizController extends AbstractController
             ) {
                 $trailer = 'd';
             }
-            header('Location: game/result', ['trailer' => $trailer]);
-            return;
+
+            if (
+                $_SESSION['c'] >= $_SESSION['d']
+                && $_SESSION['c'] >= $_SESSION['b']
+                && $_SESSION['c'] >= $_SESSION['a']
+            ) {
+                $trailer = 'c';
+            }
+
+            if (
+                $_SESSION['b'] >= $_SESSION['c']
+                && $_SESSION['b'] >= $_SESSION['d']
+                && $_SESSION['b'] >= $_SESSION['a']
+            ) {
+                $trailer = 'b';
+            }
+
+            if (
+                $_SESSION['a'] >= $_SESSION['c']
+                && $_SESSION['a'] >= $_SESSION['b']
+                && $_SESSION['a'] >= $_SESSION['d']
+            ) {
+                $trailer = 'a';
+            }
+            return $this->twig->render('Game/result.html.twig', ['trailer' => $trailer]);
         }
 
-        $getQuestionModel = new getQuestionModel();
-        $getAnswersModel = new getAnswersModel();
+        $getQuestionModel = new GetQuestionModel();
+        $getAnswersModel = new GetAnswersModel();
 
         $question = $getQuestionModel->getQuestionById($_SESSION['i']);
 

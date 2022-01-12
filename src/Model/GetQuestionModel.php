@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-class getQuestionModel extends AbstractManager
+class GetQuestionModel extends AbstractManager
 {
     public const TABLE = 'question';
 
@@ -51,5 +51,5 @@ class getQuestionModel extends AbstractManager
         $answers = $statement->fetchAll();
         return $answers;
         */
-    }
+}
 //}

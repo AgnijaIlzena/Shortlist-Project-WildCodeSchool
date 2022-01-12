@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-class getAnswersModel extends AbstractManager
+class GetAnswersModel extends AbstractManager
 {
     public const TABLE = 'answer';
 
