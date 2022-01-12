@@ -11,7 +11,7 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
-    'contactUs/index' => ['ContactController', 'index',],
+    'contact' => ['ContactController', 'index',],
     'login' => ['LoginController', 'login',],
     'signUp' => ['SignUpController', 'signUp',],
     'signUp/add' => ['SignUpController', 'add',],
