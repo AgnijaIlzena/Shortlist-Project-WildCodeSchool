@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Model\GetQuestionModel;
 use App\Model\GetAnswersModel;
+use App\Model\WriteFinalAnswerModel;
 
 class QuizController extends AbstractController
 {
@@ -51,11 +52,14 @@ class QuizController extends AbstractController
 
         if ($_SESSION['i'] === 9) {
             unset($_SESSION['i']);
+            $writeFinalAnswer = new WriteFinalAnswerModel();
             if (
                 $_SESSION['d'] >= $_SESSION['c']
                 && $_SESSION['d'] >= $_SESSION['b']
                 && $_SESSION['d'] >= $_SESSION['a']
             ) {
+
+                $writeFinalAnswer->writeResultInProfile($_SESSION['id'], 'd');
                 $trailer = 'https://www.youtube.com/embed/bDDGZxb6Y';
             }
 
@@ -65,6 +69,7 @@ class QuizController extends AbstractController
                 && $_SESSION['c'] >= $_SESSION['a']
             ) {
 
+                $writeFinalAnswer->writeResultInProfile($_SESSION['id'], 'c');
                 $trailer = 'https://www.youtube.com/embed/_13J_9B5jEk';
 
             }
@@ -75,6 +80,7 @@ class QuizController extends AbstractController
                 && $_SESSION['b'] >= $_SESSION['a']
             ) {
 
+                $writeFinalAnswer->writeResultInProfile($_SESSION['id'], 'b');
                 $trailer = 'https://www.youtube.com/embed/O3CIXEAjcc8';
 
             }
@@ -85,6 +91,7 @@ class QuizController extends AbstractController
                 && $_SESSION['a'] >= $_SESSION['d']
             ) {
 
+                $writeFinalAnswer->writeResultInProfile($_SESSION['id'], 'a');
                 $trailer = 'https://www.youtube.com/embed/_13J_9B5jEk';
 
             }
