@@ -56,7 +56,7 @@ class QuizController extends AbstractController
                 && $_SESSION['d'] >= $_SESSION['b']
                 && $_SESSION['d'] >= $_SESSION['a']
             ) {
-                $trailer = 'd';
+                $trailer = 'https://www.youtube.com/embed/bDDGZxb6Y';
             }
 
             if (
@@ -64,7 +64,9 @@ class QuizController extends AbstractController
                 && $_SESSION['c'] >= $_SESSION['b']
                 && $_SESSION['c'] >= $_SESSION['a']
             ) {
-                $trailer = 'c';
+
+                $trailer = 'https://www.youtube.com/embed/_13J_9B5jEk';
+
             }
 
             if (
@@ -72,7 +74,9 @@ class QuizController extends AbstractController
                 && $_SESSION['b'] >= $_SESSION['d']
                 && $_SESSION['b'] >= $_SESSION['a']
             ) {
-                $trailer = 'b';
+
+                $trailer = 'https://www.youtube.com/embed/O3CIXEAjcc8';
+
             }
 
             if (
@@ -80,7 +84,9 @@ class QuizController extends AbstractController
                 && $_SESSION['a'] >= $_SESSION['b']
                 && $_SESSION['a'] >= $_SESSION['d']
             ) {
-                $trailer = 'a';
+
+                $trailer = 'https://www.youtube.com/embed/_13J_9B5jEk';
+
             }
             return $this->twig->render('Game/result.html.twig', ['trailer' => $trailer]);
         }
@@ -92,6 +98,7 @@ class QuizController extends AbstractController
 
         $answerArray = $getAnswersModel->getAnswersById($_SESSION['i']);
 
-        return $this->twig->render('Game/quiz.html.twig', ['question' => $question , 'answers' => $answerArray]);
+        return $this->twig->render('Game/game.html.twig', ['question' => $question , 'answers' => $answerArray]);
+
     }
 }
