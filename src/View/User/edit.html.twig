@@ -1,0 +1,10 @@
+{# This is 1st LOOK #}
+
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1 class="user-edit-block">Change user name (user edit block) </h1>
+    <p class="user-edit-block">{{ user.user_name }}</p>
+    {% include 'User/_form.html.twig' %}
+    <a href="/user/show?id={{ user.id }}">Back</a>
+{% endblock %}

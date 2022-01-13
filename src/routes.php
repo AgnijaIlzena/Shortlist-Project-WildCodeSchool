@@ -5,7 +5,13 @@ return [
     'game' => ['QuizController', 'quizDisplay',],
     'user/films' => ['FilmController', 'index'],
     'user/films/delete' => ['FilmController', 'delete',],
-    'items' => ['ItemController', 'index',],
+    'user' => ['UserController', 'index'],
+    'user/show' => ['UserController', 'show', ['id']],
+
+    'user/edit' => ['UserController', 'edit', ['id']],
+
+    'user/add' => ['UserController', 'add',],
+    //'items' => ['ItemController', 'index',],
    // 'home/index' => ['HomeController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
