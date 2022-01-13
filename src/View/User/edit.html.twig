@@ -1,0 +1,7 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1 class="user-edit-block">Change user name</h1>
+    <p class="user-edit-block">{{ user.user_name }}</p>
+    {% include 'User/_form.html.twig' %}
+  {% endblock %}
