@@ -8,7 +8,7 @@ class UserManager extends AbstractManager
 
     public function selectCheckedIn(): ?array
     {
-        if(isset($_SESSION['id'])) {
+        if (isset($_SESSION['id'])) {
             $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE id = :id");
             $statement->bindValue('id', $_SESSION['id']);
             $statement->execute();
@@ -18,6 +18,8 @@ class UserManager extends AbstractManager
             } else {
                 return null;
             }
-        } else {return null;}
+        } else {
+            return null;
+        }
     }
 }
