@@ -2,6 +2,7 @@
 #user-block {
     color: var(--white);
     padding: 2% 7%;
+    height: 60vh;
 }
 
 .user-title-container {
