@@ -8,6 +8,12 @@
     margin-bottom: 5%;
     width: 70%;
 }
+
+.signUp-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: var(--white);
+}
 .contact-form .form-control{
     border-radius:1rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;

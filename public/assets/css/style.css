@@ -11,9 +11,20 @@
     padding: 0px;
     box-sizing: border-box;
    }
-
+/*
 .btn-primary{
     background-color: var(--blue)
+}
+*/
+
+
+.btn {
+    background-color: var(--blue) !important;
+    color: var(--white)!important;
+}
+
+.btn:hover, .btn:active, .btn:visited {
+    background-color: var(--accent) !important;
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:visited {

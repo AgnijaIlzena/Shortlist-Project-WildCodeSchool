@@ -1,7 +1,3 @@
-.gradient-custom-2 {
-
-    background-image: url("https://images.assetsdelivery.com/compings_v2/ghenadie/ghenadie1606/ghenadie160600038.jpg");
-}
 
 @media (min-width: 768px) {
     .gradient-form {
@@ -14,3 +10,10 @@
         border-bottom-right-radius: .3rem;
     }
 }
+
+#login-section {
+    background-color: var(--dark-bckg);
+}
+
+
+
