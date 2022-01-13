@@ -10,6 +10,10 @@ class SignUpController extends AbstractController
     {
         return $this->twig->render('signUp/signUp.html.twig');
     }
+    public function terms()
+    {
+        return $this->twig->render('signUp/terms.html.twig');
+    }
     public function add(): string
     {
         $error = '';
