@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} Profile {% endblock %}
+
+
+{% block content %}
+
+    <section id="user-block">
+        <div>
+            <div class="user-title-container user-container row">
+                <div class="col">
+                    <h3 class="user">Account Setting</h3>
+                </div>
+                <div class="col">
+                    <h2 class="greeting-block">Hello, {{ user.user_name }}</h2>
+                </div>
+            </div>
+
+            <div>
+                <h3> <a href="">Edit Profile</a></h3>
+            </div>
+
+            {# <a href="/user/show?id={{ user.id }}">{{ user.id }} {{ user.user_name }}</a>  #}
+    </section>
+
+{% endblock %}

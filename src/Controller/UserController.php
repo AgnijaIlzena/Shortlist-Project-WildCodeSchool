@@ -10,6 +10,6 @@ class UserController extends AbstractController
     {
         $userManager = new UserManager();
         $user = $userManager->selectCheckedIn();
-        return $this->twig->render('User/LogedInUserLook.html.twig', ['user' => $user]);
+        return $this->twig->render('User/LogedInUser.html.twig', ['user' => $user]);
     }
 }
