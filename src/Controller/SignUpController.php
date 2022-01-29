@@ -23,7 +23,7 @@ class SignUpController extends AbstractController
             $result = $signUpManager->checkemail($_POST['email']);
             if ($result) {
                 $signUpManager->insert($user);
-                header('Location: /home/index');
+                header('Location: login');
                 return '';
             } else {
                 $error = "This email id is already present";

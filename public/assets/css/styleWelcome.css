@@ -32,3 +32,8 @@
 .play-icon {
     padding-right: 20px;
 }
+
+.rules-btn {
+    position: relative;
+    left: 90%;
+}

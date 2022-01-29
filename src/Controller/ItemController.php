@@ -17,7 +17,7 @@ class ItemController extends AbstractController
         return $this->twig->render('Item/index.html.twig', ['items' => $items]);
     }
     /**
-     * Show informations for a specific item
+     * Show information for a specific item
      */
     public function show(int $id): string
     {
@@ -37,8 +37,6 @@ class ItemController extends AbstractController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // clean $_POST data
             $item = array_map('trim', $_POST);
-
-            // TODO validations (length, format...)
 
             // if validation is ok, update and redirection
           //  $itemManager->update($item);

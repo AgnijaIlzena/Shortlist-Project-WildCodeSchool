@@ -5,6 +5,7 @@
 {% endblock %}
 <form method="post">
 	<input type="hidden" value="{{ item.id }}" name="id">
-	<input type="text" value="{{ item.title }}" name="title">
+    <label for="">User name</label>
+    <input type="text" value="{{ item.user_name }}" name="user_name">
 	<input type="submit" value="Valider">
 </form>

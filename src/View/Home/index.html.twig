@@ -7,9 +7,16 @@
     <div class="col-lg-6 left-block">
         <h1 class="slogan">Which movie tonight ?</h1>
             <div >
-                <button type="button" class="play btn btn-primary btn-lg"><i class=" play-icon fab fa-youtube"></i>Play</button>
+                <form method="post" action="/game?answer=start">
+                <button type="submit" class="play btn btn-primary btn-lg"><i class=" play-icon fab fa-youtube" ></i>Play</button>
+                </form>
             </div>
     </div>
+
+
+
+
+
     <div class="col-lg-6">
         <img class="welcome-img" src="/assets/images/popcorn.jpg" alt="image cinema">
     </div>
@@ -44,6 +51,11 @@
             <h3 class="sub-title">Save</h3>
             <p class="description-rules">Save the video trailer.  You'll be able to find it in your Watchlist further on.</p>
         </div>
+    </div>
+    <div class="rules-btn">
+        <form method="post" action="/game?answer=start">
+            <button type="submit" class="btn btn-primary"><i class=" play-icon fab fa-youtube" ></i>Play</button>
+        </form>
     </div>
 </section>
 {% endblock %}

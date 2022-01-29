@@ -1,108 +1,86 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
-<html>
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <style>@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+    <html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <style>@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+            body{
+                font-size: 19px;
+                font-family: 'Avenir', sans-serif;
+                font-weight: 300;
+                text-align: center
+            }
+            h1{
+                font-weight: 300px;
+                margin: 0px;
+                padding: 10px;
+                font-size: 30px;
+                color: var(--white);
+                font-family: 'Montserrat', sans-serif;
+                border-bottom: solid 0.5px var(--blue);
+            ;
+            }
+            .answers label{
+                display: block;
+                margin-bottom: 15px;
+            }
+            .btn{
+                font-family: 'Brandon Grotesque', sans-serif;
+                font-size: 15px;
+                border: 0px;
+                border-radius: 10px;
+                width: 100%; height: 100px;
+                /*cursor: -webkit-grabbing; cursor: grabbing;*/
+                margin-bottom: 10px;
+                margin-top: 30px;
+            }
+            button:hover{
+            }
+            button{
+            }
+            .quiz-container{
+                position: relative;
+                height: 120px;
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+    <body>
+    <h1>Game</h1>
+    <div class="quiz-container "style=" color: var(--white);">
 
-        body{
-            font-size: 19px;
-            font-family: 'Avenir', sans-serif;
-            font-weight: 300;
-            text-align: center
+        {{ question }}
 
-        }
-        h1{
-            font-weight: 300px;
-            margin: 0px;
-            padding: 10px;
-            font-size: 30px;
-            color: var(--white);
-            font-family: 'Montserrat', sans-serif;
-            border-bottom: solid 0.5px var(--blue);
-        ;
-        }
-        .question{
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-        .answers {
-            margin-bottom: 20px;
-            text-align: left;
-            display: inline-block;
-        }
-        .answers label{
-            display: block;
-            margin-bottom: 15px;
-        }
-        button{
-             font-family: 'Brandon Grotesque', sans-serif;
-             font-size: 15px;
-             background-color: #fff;
-             color: #212020;
-             border: 0px;
-             border-radius: 20px;
-             padding: 20px;
-             cursor: -webkit-grabbing; cursor: grabbing;
-             margin-bottom: 20px;
-             margin-top: 60px;
-         }
-        button:hover{
-            background-color: #e5acac;
-        }
-        .slide{
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            z-index: 2;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .active-slide{
-            opacity: 2;
-            z-index: 3;
-        }
-        .quiz-container{
-            position: relative;
-            height: 120px;
-            margin-top: 40px;
-
-        }
-
-
-
-    </style>
-</head>
-<body>
-<h1>Game</h1>
-<div class="quiz-container "style=" color: var(--white);">
-
-{{ question }}
-
-
-</div>
-<div class="container">
-    <div class="row g-0">
-        <div class="col-lg-6 d-flex0 justify-content-center">
-            <form method="post" action= "/game?answer=a">
-            <button type="submit">{{ answers[0] }}</button>
-            </form>
-            <form method="post" action="/game?answer=b">
-            <button type="submit">{{ answers[1] }}</button>
-            </form>
-        </div>
-        <div class="col-lg-6 d-flex0 justify-content-center">
-            <form method="post" action= "/game?answer=c">
-                <button type="submit">{{ answers[2] }}</button>
-            </form>
-            <form method="post" action="/game?answer=d">
-                <button type="submit">{{ answers[3] }}</button>
-            </form>
-        </div>
     </div>
-<div id="results" style=" color: var(--white);"></div>
-</div>
-</body>
-</html>
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-lg-6 d-flex0 justify-content-center px-5">
+                <div  id="btn">
+                    <form method="post" action= "/game?answer=a">
+                        <button type="submit"class="btn justify-content-center"style="margin-top: 30px">{{ answers[0] }}</button>
+                    </form>
+                </div >
+                <div >
+                    <form method="post" action="/game?answer=b">
+                        <button type="submit"class="btn justify-content-center"style="margin-top: 30px">{{ answers[1] }}</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex0 justify-content-center px-5">
+                <div >
+                    <form method="post" action= "/game?answer=c">
+                        <button type="submit"class="btn justify-content-center"style="margin-top: 30px">{{ answers[2] }}</button>
+                    </form>
+                </div>
+                <div >
+                    <form method="post" action="/game?answer=d">
+                        <button type="submit"class=" btn justify-content-center"style="margin-top: 30px">{{ answers[3] }}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="results" style=" color: var(--white);"></div>
+    </div>
+    </body>
+    </html>
 {% endblock %}

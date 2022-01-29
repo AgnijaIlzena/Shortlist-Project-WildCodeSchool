@@ -20,7 +20,7 @@ class LoginController extends AbstractController
                         if (password_verify($password, $email['passowrd'])) {
                             $_SESSION['email'] = $email['email'];
                             $_SESSION['id'] = $email['id'];
-                            header("Location: /home/index");
+                            header("Location: /");
                             return '';
                         } else {
                             $error = "password is not correct";
@@ -40,6 +40,6 @@ class LoginController extends AbstractController
     public function logout()
     {
         session_destroy();
-        header("Location: /home/index");
+        header("Location: /");
     }
 }
