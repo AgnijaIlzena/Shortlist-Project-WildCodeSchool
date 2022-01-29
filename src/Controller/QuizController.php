@@ -53,30 +53,58 @@ class QuizController extends AbstractController
         if ($_SESSION['i'] === 9) {
             unset($_SESSION['i']);
             $writeFinalAnswer = new WriteFinalAnswerModel();
-            if ($_SESSION['d'] >= $_SESSION['c'] && $_SESSION['d'] >= $_SESSION['b'] && $_SESSION['d'] >= $_SESSION['a']) {
+            if (
+                $_SESSION['d'] >= $_SESSION['c']
+                && $_SESSION['d'] >= $_SESSION['b']
+                && $_SESSION['d'] >= $_SESSION['a']
+            ) {
 
-                //  $writeFinalAnswer->writeResultInProfile($_SESSION['id'], 'd');
-                $trailer = 'https://www.youtube.com/embed/bDDGZxb6Y';
+                // $writeFinalAnswer->writeResultInProfile($_SESSION['id'], 'd');
+                $trailer = 'https://www.youtube.com/embed/O3CIXEAjcc8';
             }
-            if ($_SESSION['c'] >= $_SESSION['d'] && $_SESSION['c'] >= $_SESSION['b'] && $_SESSION['c'] >= $_SESSION['a']) {
-                // $writeFinalAnswer->writeResultInProfile($_SESSION['id'], 'c');
+
+            if (
+                $_SESSION['c'] >= $_SESSION['d']
+                && $_SESSION['c'] >= $_SESSION['b']
+                && $_SESSION['c'] >= $_SESSION['a']
+            ) {
+
+                $trailer = 'https://www.youtube.com/embed/FAOzXGibKJc';
+
+            }
+
+            if (
+                $_SESSION['b'] >= $_SESSION['c']
+                && $_SESSION['b'] >= $_SESSION['d']
+                && $_SESSION['b'] >= $_SESSION['a']
+            ) {
+
+                //$writeFinalAnswer->writeResultInProfile($_SESSION['id'], 'b');
                 $trailer = 'https://www.youtube.com/embed/_13J_9B5jEk';
+
             }
-            if ($_SESSION['b'] >= $_SESSION['c'] && $_SESSION['b'] >= $_SESSION['d'] && $_SESSION['b'] >= $_SESSION['a']) {
-                //  $writeFinalAnswer->writeResultInProfile($_SESSION['id'], 'b');
-                //$trailer = 'https://www.youtube.com/embed/O3CIXEAjcc8';
-                //}
-                if ($_SESSION['a'] >= $_SESSION['c'] && $_SESSION['a'] >= $_SESSION['b'] && $_SESSION['a'] >= $_SESSION['d']) {
+
+            if (
+                $_SESSION['a'] >= $_SESSION['c']
+                && $_SESSION['a'] >= $_SESSION['b']
+                && $_SESSION['a'] >= $_SESSION['d']
+            ) {
+
                 // $writeFinalAnswer->writeResultInProfile($_SESSION['id'], 'a');
-                }
-                $trailer = 'https://www.youtube.com/embed/_13J_9B5jEk';
+                $trailer = 'https://www.youtube.com/embed/bDDGZxb6YhM';
+
             }
             return $this->twig->render('Game/result.html.twig', ['trailer' => $trailer]);
         }
+
         $getQuestionModel = new GetQuestionModel();
         $getAnswersModel = new GetAnswersModel();
+
         $question = $getQuestionModel->getQuestionById($_SESSION['i']);
+
         $answerArray = $getAnswersModel->getAnswersById($_SESSION['i']);
+
         return $this->twig->render('Game/game.html.twig', ['question' => $question , 'answers' => $answerArray]);
+
     }
 }

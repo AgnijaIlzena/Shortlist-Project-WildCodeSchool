@@ -10,10 +10,6 @@
     margin-bottom: 5%;
 }
 
-.user-form {
-
-}
-
 .user-form-label {
     color:var(--white);
 }
@@ -25,8 +21,6 @@
 .user {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    border-bottom: ;
-}
 
 .line {
 
