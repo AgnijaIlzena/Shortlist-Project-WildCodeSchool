@@ -1,0 +1,34 @@
+#user-block {
+    color: var(--white);
+    padding: 2% 7%;
+    height: 60vh;
+}
+
+.user-title-container {
+    padding: 0% 2%;
+    border-bottom: solid 0.5px var(--blue);
+    margin-bottom: 5%;
+}
+
+.user-form {
+
+}
+
+.user-form-label {
+    color:var(--white);
+}
+
+.user-edit-block {
+    color:var(--white);
+}
+
+.user {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-bottom: ;
+}
+
+.line {
+
+    border-color: var(--light-blue);
+}
