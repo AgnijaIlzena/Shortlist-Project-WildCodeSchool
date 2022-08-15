@@ -1,6 +1,6 @@
 # Project "Shortlist"
 Projet développé @Wild Code School
-Guide vidéo à travers le projet:  https://youtu.be/vusHz2TiGCw
+## Guide vidéo à travers le projet:  https://youtu.be/vusHz2TiGCw
 
 Outils : PHP, Twig, JS, MySQL, Bootstrap, mobile first, MVC, Git.
 2022 janvier | 3 semaines | Projet développé @Wild Code School
